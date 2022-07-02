@@ -2,7 +2,7 @@ import { Route, Switch, NavLink } from "react-router-dom";
 import { movies } from "../../data/movieData";
 import MovieDetails from "../MovieDetails";
 
-function Movies({ movies: { id, title, description } }) {
+function Movies( {movies: {id, title, description }} ) {
 
   const handleClick = () => {
     console.log('Thanks');
@@ -25,7 +25,7 @@ function Movies({ movies: { id, title, description } }) {
       </nav>
       <Switch>
         <Route path='/movies/:movieId'>
-          <MovieDetails />
+          <MovieDetails movies={movies} />
         </Route>
       </Switch>
     </div>
